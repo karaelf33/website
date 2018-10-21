@@ -21,7 +21,9 @@ var libs = './src/assets/lib/',
     templates = './src/templates/',
     dist = './dist/',
     sourceJs = [
-        './src/assets/lib/jquery/dist/jquery.min.js'
+        './src/assets/lib/jquery/dist/jquery.min.js',
+        './src/assets/lib/bootstrap/dist/js/bootstrap.min.js',
+        './src/assets/js/main.js'
 
     ],
     js = 'assets/js/',
@@ -37,18 +39,18 @@ gulp.task('clean', function (cb) {
 
 gulp.task('copy-images', function () {
     return gulp
-        .src(['./src/assets/img/**/*'])
-        .pipe(gulp.dest('./dist/assets/img/'))
+        .src(['./src/assets/images/**/*'])
+        .pipe(gulp.dest('./dist/assets/images/'))
 });
 
 gulp.task('copy-images:watch', function () {
-    gulp.watch('./src/assets/img/*', ['copy-images']);
+    gulp.watch('./src/assets/images/*', ['copy-images']);
 
 });
 
 gulp.task('copy-fonts', function () {
     return gulp
-        .src([])
+        .src(['./src/assets/fonts/**/*', './src/assets/lib/slick-carousel/slick/fonts/**/*', './src/assets/lib/font-awesome/fonts/**/*'])
         .pipe(gulp.dest('./dist/assets/fonts/'))
 });
 
@@ -62,9 +64,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('html', function () {
-    return gulp.src('./src/templates/pages/*.html')
+    return gulp.src('./src/*.html')
         .pipe(twig({
-            base: './src/templates/',
+            base: './src/*/',
             data: {}
         }))
         .pipe(gulp.dest(dist))
@@ -77,11 +79,11 @@ gulp.task('sass:watch', function () {
 });
 
 gulp.task('html:watch', function () {
-    gulp.watch('./src/templates/**/**', ['html']);
+    gulp.watch('./src/**/**', ['html']);
 });
 
 gulp.task('js:watch', function () {
-    gulp.watch('./src/assets/js/**/**', ['scripts']);
+    gulp.watch('./src/assets/js/**/*', ['scripts']);
 });
 
 
@@ -93,8 +95,6 @@ gulp.task('scripts', function () {
         .pipe(connect.reload());
 
 });
-
-
 
 gulp.task('prod-sass', function () {
     return gulp.src(scss)
@@ -120,7 +120,7 @@ gulp.task('prod-scripts', function () {
 gulp.task('connect', function () {
     connect.server({
         root: 'dist',
-        port: 8003,
+        port: 8004,
         livereload: true
     });
 });
@@ -139,7 +139,7 @@ gulp.task('open', function () {
 
     gulp.src('dist/blog.html')
         .pipe(open({
-            uri: 'http://localhost:8003/',
+            uri: 'http://localhost:8004/',
             app: apppath
         }));
 });
