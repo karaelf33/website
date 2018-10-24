@@ -10,11 +10,7 @@ body {
   background-image: url('http://artlantis-media.ru/static/img/0000/0002/7260/27260842.qvpm616fga.png');
   background-blend-mode: overlay;
   background-size: 15%;
-
-
-
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -190,6 +186,7 @@ body {
 /*End of Section*/
 
 /*NavBar Style*/
+
 /*Comes up only when you're open in a section*/
 
 nav.main {
@@ -473,6 +470,7 @@ nav.main {
 }
 
 /*contact me scss*/
+
 #section8{
    width:100%;
   margin-left: -69px;
@@ -631,11 +629,13 @@ nav.main {
   }
 
 //section6 ---------------------------------------------------------------------------------
+
 #section6{
   @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext');
     position: relative;
-    overflow-x: hidden!important;
+   // overflow-x: hidden!important;
     font-family: 'Quicksand', sans-serif;
+  top: 20px !important;
   a, a:hover {
     text-decoration: none;
   }
@@ -692,7 +692,7 @@ nav.main {
     //transform: translateX(-50%);
 
     &.active {
-      left: 0;
+      left: -72px;
       top: 0;
       opacity: 1;
     }

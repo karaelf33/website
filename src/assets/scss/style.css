@@ -506,8 +506,8 @@ form {
 #section6 {
   @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
   position: relative;
-  overflow-x: hidden !important;
-  font-family: 'Quicksand', sans-serif; }
+  font-family: 'Quicksand', sans-serif;
+  top: 20px !important; }
   #section6 a, #section6 a:hover {
     text-decoration: none; }
   #section6 .icon {
@@ -550,7 +550,7 @@ form {
     transition: all .3s;
     left: -30px; }
     #section6 .item-bg.active {
-      left: 0;
+      left: -72px;
       top: 0;
       opacity: 1; }
   #section6 .news-slider {
