@@ -23,6 +23,7 @@ var libs = './src/assets/lib/',
     sourceJs = [
         './src/assets/lib/jquery/dist/jquery.min.js',
         './src/assets/lib/bootstrap/dist/js/bootstrap.min.js',
+        './src/assets/lib/isotope-layout/dist/isotope.pkgd.min.js',
         './src/assets/js/main.js'
 
     ],
@@ -64,9 +65,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('html', function () {
-    return gulp.src('./src/*.html')
+    return gulp.src('./src/templates/pages/*.html')
         .pipe(twig({
-            base: './src/*/',
+            base: './src/templates/',
             data: {}
         }))
         .pipe(gulp.dest(dist))
@@ -79,11 +80,11 @@ gulp.task('sass:watch', function () {
 });
 
 gulp.task('html:watch', function () {
-    gulp.watch('./src/**/**', ['html']);
+    gulp.watch('./src/templates/**/**', ['html']);
 });
 
 gulp.task('js:watch', function () {
-    gulp.watch('./src/assets/js/**/*', ['scripts']);
+    gulp.watch('./src/assets/js/**/**', ['scripts']);
 });
 
 
@@ -95,6 +96,8 @@ gulp.task('scripts', function () {
         .pipe(connect.reload());
 
 });
+
+
 
 gulp.task('prod-sass', function () {
     return gulp.src(scss)
@@ -120,7 +123,7 @@ gulp.task('prod-scripts', function () {
 gulp.task('connect', function () {
     connect.server({
         root: 'dist',
-        port: 8004,
+        port: 8002,
         livereload: true
     });
 });
@@ -139,7 +142,7 @@ gulp.task('open', function () {
 
     gulp.src('dist/blog.html')
         .pipe(open({
-            uri: 'http://localhost:8004/',
+            uri: 'http://localhost:8002/',
             app: apppath
         }));
 });

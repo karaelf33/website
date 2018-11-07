@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Yusuf Beştaş Web Developer</title>
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://dev.see8ch.com/see8ch/v3/fonts/ss-standard/ss-standard.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+    <link href="http://dev.see8ch.com/see8ch/v3/fonts/ss-social/ss-social.css" rel="stylesheet" />
+      <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+    #mainB {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("http://grantcr.com/files/bg.png") 0 0;
+      z-index: -9000;
+      opacity: 0.98;
+    }
+
+    .bg {
+      background: url("http://grantcr.com/files/texture.png") 0 0;
+      height: 100%;
+      opacity: 0.99;
+      z-index: -7000;
+    }
+
+    .bg1 {
+      background: url("http://grantcr.com/files/bgg.png") 0 0;
+      height: 100%;
+      opacity: 0.95;
+      z-index: -7000;
+    }
+
+    .over {
+      background: url("http://grantcr.com/files/top.png") top center no-repeat;
+      position: fixed;
+      opacity: 0.8;
+      width: 100%;
+      top: -22px;
+      bottom: 90%;
+      z-index: 300;
+      height: 500px;
+      right: 8px;
+    }
+
+    .dial {
+      width: 165px;
+      height: 165px;
+      border-radius: 50%;
+      position: relative;
+      display: block;
+      margin: auto auto;
+      top: 300px;
+      opacity: 0.9;
+      *zoom: 1;
+      filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFC9CFD7', endColorstr='#FFB0B7C1');
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M5Y2ZkNyIvPjxzdG9wIG9mZnNldD0iNDYlIiBzdG9wLWNvbG9yPSIjMmIyZjNlIiBzdG9wLW9wYWNpdHk9IjAuOTciLz48c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iIzJiMmYzZSIgc3RvcC1vcGFjaXR5PSIwLjk3Ii8+PHN0b3Agb2Zmc2V0PSI1MiUiIHN0b3AtY29sb3I9IiMyYjJmM2UiLz48c3RvcCBvZmZzZXQ9IjU1JSIgc3RvcC1jb2xvcj0iIzJiMmYzZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IwYjdjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c9cfd7), color-stop(46%, rgba(43, 47, 62, 0.97)), color-stop(48%, rgba(43, 47, 62, 0.97)), color-stop(52%, #2b2f3e), color-stop(55%, #2b2f3e), color-stop(100%, #b0b7c1));
+      background-image: -moz-linear-gradient(top, #c9cfd7 0%, rgba(43, 47, 62, 0.97) 46%, rgba(43, 47, 62, 0.97) 48%, #2b2f3e 52%, #2b2f3e 55%, #b0b7c1 100%);
+      background-image: -webkit-linear-gradient(top, #c9cfd7 0%, rgba(43, 47, 62, 0.97) 46%, rgba(43, 47, 62, 0.97) 48%, #2b2f3e 52%, #2b2f3e 55%, #b0b7c1 100%);
+      background-image: linear-gradient(to bottom, #c9cfd7 0%, rgba(43, 47, 62, 0.97) 46%, rgba(43, 47, 62, 0.97) 48%, #2b2f3e 52%, #2b2f3e 55%, #b0b7c1 100%);
+      z-index: 99999;
+      box-shadow: 2px 15px 15px 7px rgba(0, 0, 0, 0.3), -15px 2px 5px rgba(0, 0, 0, 0.2), 1px 10px 15px rgba(0, 0, 0, 0.5), 0px 10px 5px rgba(0, 0, 0, 0.7);
+    }
+    .dial .grad {
+      background: url("http://grantcr.com/files/dail.png") 0 0 no-repeat;
+      width: 165px;
+      z-index: 999;
+      height: 165px;
+      position: absolute;
+      top: 3px;
+      border-radius: 50%;
+      left: 3px;
+      opacity: 1;
+    }
+
+    .container {
+      width: 325px;
+      position: relative;
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    .nav {
+      position: relative;
+      width: 100%;
+      top: 200px;
+    }
+
+    #nav li {
+      display: inline-block;
+      list-style-type: none;
+      float: left;
+      margin-right: 43px;
+    }
+    #nav li a {
+      cursor: pointer;
+    }
+    #nav li:nth-of-type(1) {
+      position: relative;
+      left: 10px;
+    }
+    #nav li:nth-of-type(1):after {
+      content: " ";
+      background: url("http://grantcr.com/files/circle.png") center center no-repeat;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 7px;
+      left: 35px;
+    }
+    #nav li:nth-of-type(2) {
+      position: relative;
+      top: -85px;
+      left: -25px;
+    }
+    #nav li:nth-of-type(2):after {
+      content: " ";
+      background: url("http://grantcr.com/files/circle.png") center center no-repeat;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 30px;
+      top: 25px;
+    }
+    #nav li:nth-of-type(3) {
+      position: relative;
+      top: -120px;
+    }
+    #nav li:nth-of-type(3):before {
+      content: " ";
+      background: url("http://grantcr.com/files/circle.png") center center no-repeat;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 30px;
+      left: 12px;
+    }
+    #nav li:nth-of-type(4) {
+      position: relative;
+      top: -85px;
+      left: 25px;
+    }
+    #nav li:nth-of-type(4):before {
+      content: " ";
+      background: url("http://grantcr.com/files/circle.png") center center no-repeat;
+      width: 10px;
+      position: absolute;
+      height: 10px;
+      top: 25px;
+      left: -15px;
+    }
+    #nav li:nth-of-type(5) {
+      position: relative;
+      left: -15px;
+      top: -1px;
+      margin: 0;
+    }
+    #nav li:nth-of-type(5):before {
+      content: " ";
+      background: url("http://grantcr.com/files/circle.png") center center no-repeat;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: -17px;
+      top: 8px;
+    }
+
+    .active > a {
+      box-shadow: 0px 0px 100px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .r0 {
+      transition: all 1s ease;
+      transform: rotate(0deg);
+    }
+
+    .rr1 {
+      transition: all 1s ease;
+      transform: rotate(45deg);
+    }
+
+    .rr2 {
+      transition: all 1s ease;
+      transform: rotate(90deg);
+    }
+
+    .lr1 {
+      transition: all 1s ease;
+      transform: rotate(-45deg);
+    }
+
+    .lr2 {
+      transition: all 1s ease;
+      transform: rotate(-90deg);
+    }
+
+  </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+  <nav class='main hList inactive'>
+  <div class="tab active"><span>About</span></div><!--
+  --><div class="tab"><span>Work</span></div><!--
+  --><div class="tab"><span>Profiles</span></div><!--
+  --><div class="tab" ><span>Store</span></div><!--
+  --><div class="tab" ><span>PORTFOLIO</span></div><!--
+  --><div class="tab" ><span>BLOG</span></div><!--
+  --><div class="tab" ><span>AROUND THE WEB</span></div><!--
+  --><div class="tab" ><span>CONTACT ME</span></div>
+</nav>
+<page id="home">
+    <div class="testasaması" style="background:white;position: absolute;top: 20px;right: 200px;width: 400px;height: 100px;padding-top:20px; z-index: 50">
+        <p style="color:darkblue; margin-bottom: 20px;">The website is currently under construction. Send an email to  <a href="mailto:bestasyusuf8@gmail.com">bestasyusuf8@gmail.com</a> for to get in touch.</p>
+        <p style="color:darkblue;">
+            Web sitesi şu anda yapım aşamasındadır. İletişim kurmak için <a href="mailto:bestasyusuf8@gmail.com">bestasyusuf8@gmail.com</a>adresine bir e-posta gönderin.</p>
+    </div>
+  <span class="pagetag">HOME</span>
+  <section class="header">
+    <div>
+      <h2><span>Y</span><span>usuf BEŞTAŞ</span></h2>
+      <h1>WEB Developer</h1>
+    </div>
+    <div class='logo'></div>
+  </section>
+  <section id="grid_wrapper" class="init">
+    <card>
+      <div>
+        <span>ABOUT</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>WORK</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>PROFILES</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>STORE</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>PORTFOLIO</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>BLOG</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>AROUND THE WEB
+</span>
+      </div>
+    </card>
+    <card>
+      <div>
+        <span>CONTACT ME</span>
+      </div>
+    </card>
+  </section>
+</page>
+<div id="content_wrapper" class='inactive'>
+  <button class="close">&#xf00d;</button>
+  <div class='content'>
+    <section>
+      <h2>#1</h2>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+    </section>
+    <section>
+      <h2>#2</h2>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+    </section>
+    <section>
+      <h2>#3</h2>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+    </section>
+    <section>
+      <h2>#4</h2>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+    </section>
+    <section>
+      <h2>#5</h2>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+      <p>
+        Here's some random shit for this random tab on this random template.
+      </p>
+    </section>
+    <section id="section6">
+        <div class="wrapper">
+
+            <div class="background">
+                <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132206/news-slider/background.jpg" alt="">
+            </div>
+            <div class="item-bg"></div>
+
+            <div class="news-slider">
+                <div class="news-slider__wrp swiper-wrapper">
+                    <div class="news-slider__item swiper-slide">
+                        <a href="#" class="news__item">
+                            <div class="news-date">
+                                <span class="news-date__title">24</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Lorem Ipsum Dolor Sit Amed
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                            </p>
+
+                            <div class="news__img">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-2.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="#" class="news__item">
+                            <div class="news-date">
+                                <span class="news-date__title">25</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Lorem Ipsum Dolor Sit Amed
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                            </p>
+
+                            <div class="news__img">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-3.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="#" class="news__item">
+                            <div class="news-date">
+                                <span class="news-date__title">26</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Lorem Ipsum Dolor Sit Amed
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                            </p>
+
+                            <div class="news__img">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-4.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="#" class="news__item">
+                            <div class="news-date">
+                                <span class="news-date__title">27</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Lorem Ipsum Dolor Sit Amed
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                            </p>
+
+                            <div class="news__img">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-2.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="#" class="news__item">
+                            <div class="news-date">
+                                <span class="news-date__title">28</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Lorem Ipsum Dolor Sit Amed
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                            </p>
+
+                            <div class="news__img">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-5.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="news-slider__item swiper-slide">
+                        <a href="#" class="news__item">
+                            <div class="news-date">
+                                <span class="news-date__title">29</span>
+                                <span class="news-date__txt">May</span>
+                            </div>
+                            <div class="news__title">
+                                Lorem Ipsum Dolor Sit Amed
+                            </div>
+
+                            <p class="news__txt">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                            </p>
+
+                            <div class="news__img">
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-4.jpg" alt="news">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="news-slider__ctr">
+
+                    <div class="news-slider__arrows">
+                        <button class="news-slider__arrow news-slider-prev">
+          <span class="icon-font">
+            <svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg>
+          </span>
+                        </button>
+                        <button class="news-slider__arrow news-slider-next">
+          <span class="icon-font">
+            <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+          </span>
+                        </button>
+                    </div>
+
+                    <div class="news-slider__pagination"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <svg hidden="hidden">
+            <defs>
+                <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+                    <title>arrow-left</title>
+                    <path d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z"></path>
+                </symbol>
+                <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+                    <title>arrow-right</title>
+                    <path d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z"></path>
+                </symbol>
+            </defs>
+        </svg>
+    </section>
+    <section id="section7">
+
+      <div id="mainB">
+        <div class="bg">
+          <div class="bg1">
+
+          </div>
+        </div>
+      </div>
+      <div class="over">
+        <div class="dial">
+          <div class="grad">
+
+          </div>
+        </div>
+        <div class="container">
+          <div class="nav">
+            <ul id="nav">
+              <li id="email">
+                <a>
+                  <img src="../../assets/images/facebook.png"/>
+                </a>
+              </li>
+              <li id="photo">
+                <a>
+                  <img src="http://grantcr.com/files/iphoto.png" />
+                </a>
+              </li>
+              <li id="cloud" class="active">
+                <a>
+                  <img src="http://grantcr.com/files/icloud.png" />
+                </a>
+              </li>
+              <li id="portfolio">
+                <a>
+                  <img src="http://grantcr.com/files/portfolio.png" />
+                </a>
+              </li>
+              <li id="settings">
+                <a>
+                  <img src="https://resmim.net/f/tN9Z3d.png"/>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section id="section8">
+          <div id="hire">
+          <h1>Contact Me</h1>
+
+          <form>
+              <div class="field name-box">
+                  <input type="text" id="name" placeholder="Who Are You?"/>
+                  <label for="name">Name</label>
+                  <span class="ss-icon">check</span>
+              </div>
+
+              <div class="field email-box">
+                  <input type="text" id="email1" placeholder="name@email.com"/>
+                  <label for="email1">Email</label>
+                  <span class="ss-icon">check</span>
+              </div>
+
+              <div class="field msg-box">
+                  <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
+                  <label for="msg">Msg</label>
+                  <span class="ss-icon">check</span>
+              </div>
+
+              <input class="button" type="submit" value="Send" />
+          </form>
+          </div>
+      </section>
+  </div>
+</div>
+<div id="footer">
+  <span style="display:block;font-size:0.9em;line-height:55px;"><span style="display:inline-block;">&copy; <span style="font-family:'Titillium Web';font-weight:900;letter-spacing:0.06em">Copyright YusufBestas </span> in his 25th but people say its 2018</span></span>
+  <span style="display:block;font-size:0.7em;line-height:30px;margin-top:-25px;color:rgba(255,255,255,0.15)">&lang; !--Web Developer-- &rang;<span>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="assets/js/scripts.min.js"></script>
+</body>
+</html>

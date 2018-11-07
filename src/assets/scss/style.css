@@ -11,15 +11,23 @@ body {
   background-blend-mode: overlay;
   background-size: 15%; }
 
-::-webkit-scrollbar {
-  display: none; }
+body:after {
+  /* background: linear-gradient(90deg, rgba(190,78,114,1) 0%, rgba(254,117,98,1) 33.33%, rgba(86,72,105,1) 66.66%,  rgba(126,70,99,1) 100%) */
+  background-image: linear-gradient(90deg, #6bd0e4 0%, #604eb1 33%, #c88e66 66%, #c955a9 100%);
+  /* w3c */
+  content: "";
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 5px;
+  z-index: +30; }
 
-/*Grid Wrapper*/
 #home {
+  position: relative;
   color: #aaaaaf;
   width: 100%;
   height: 100%;
-  position: relative;
   padding: 100px;
   display: block;
   transition: transform 0.5s ease-in-out; }
@@ -30,7 +38,7 @@ body {
     display: inline-block;
     margin-right: 25px;
     vertical-align: middle;
-    text-shadow: 0px 5px 10px black; }
+    text-shadow: 0 5px 10px black; }
   #home > .pagetag {
     position: absolute;
     top: 10px;
@@ -62,7 +70,6 @@ body {
     margin-left: -0.2em;
     font-weight: 400; }
 
-/*Heading*/
 #grid_wrapper {
   width: 100%;
   display: inline-block;
@@ -155,9 +162,6 @@ body {
   font-size: 1.5em;
   opacity: 1; }
 
-/*End of Section*/
-/*NavBar Style*/
-/*Comes up only when you're open in a section*/
 nav.main {
   overflow-X: auto;
   overflow-Y: visible;
@@ -169,30 +173,6 @@ nav.main {
   height: 55px;
   display: block;
   white-space: nowrap; }
-
-body:after {
-  /* background: linear-gradient(90deg, rgba(190,78,114,1) 0%, rgba(254,117,98,1) 33.33%, rgba(86,72,105,1) 66.66%,  rgba(126,70,99,1) 100%) */
-  background-image: linear-gradient(90deg, #6bd0e4 0%, #604eb1 33%, #c88e66 66%, #c955a9 100%);
-  /* w3c */
-  content: "";
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  height: 5px;
-  z-index: +30; }
-
-#footer:after, #footer:before {
-  /* background: linear-gradient(90deg, rgba(190,78,114,1) 0%, rgba(254,117,98,1) 33.33%, rgba(86,72,105,1) 66.66%,  rgba(126,70,99,1) 100%) */
-  background-image: linear-gradient(90deg, #6bd0e4 0%, #604eb1 33%, #c88e66 66%, #c955a9 100%);
-  /* w3c */
-  content: "";
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  height: 5px;
-  z-index: +30; }
 
 nav.main.inactive > .tab {
   transform: rotateX(90deg) translateY(-25px); }
@@ -246,8 +226,6 @@ nav.main > .tab {
     border-bottom: 55px solid transparent;
     border-right: 10px solid rgba(0, 0, 0, 0.1); }
 
-/*End of Section*/
-/*Ripple Styling*/
 .ripple {
   position: fixed;
   animation: ripple 1s 1 ease-out;
@@ -260,7 +238,6 @@ nav.main > .tab {
   border-radius: 50%;
   opacity: 0; }
 
-/*One for the BIIIIG ONE!*/
 .mega.ripple {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
@@ -270,8 +247,6 @@ nav.main > .tab {
   0% {
     opacity: 1;
     transform: scale(0); } }
-/*End of Section*/
-/*This one Wraps content of the tabs*/
 #content_wrapper {
   position: fixed;
   z-index: +20;
@@ -356,158 +331,11 @@ nav.main > .tab {
 @keyframes flipClose {
   from {
     transform: translate(-50%, -50%) rotateY(180deg); } }
-/*End of Section*/
-/*Footer Design*/
-#footer {
-  font-size: 0.9em;
-  position: relative;
-  margin-top: 200px;
-  width: 100%;
-  height: 70px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.3);
-  z-index: +15; }
-  #footer:before {
-    position: absolute;
-    top: 0;
-    height: 3px; }
-  #footer:after {
-    position: absolute;
-    bottom: 1px;
-    top: unset;
-    height: 3px; }
-
-/*contact me scss*/
-#section8 {
-  width: 100%;
-  margin-left: -69px;
-  background: #efefef;
-  font-size: 62.5%;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  color: #B6B6B6; }
-  #section8 #hire {
-    background: white;
-    margin: 60px auto 120px;
-    border-top: 15px solid #313A3D;
-    text-align: center;
-    padding: 50px 0 110px;
-    width: 80%;
-    max-width: 1100px; }
-    #section8 #hire h1 {
-      margin-bottom: 40px;
-      font-size: 4em;
-      text-transform: uppercase;
-      font-family: 'Lato', sans-serif;
-      font-weight: 100; }
-
-form {
-  width: 58.3333333333%;
-  margin: 0 auto; }
-  form .field {
-    width: 100%;
-    position: relative;
-    margin-bottom: 15px; }
-    form .field label {
-      text-transform: uppercase;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #313A3D;
-      width: 100%;
-      padding: 18px 0;
-      font-size: 1.45em;
-      letter-spacing: 0.075em;
-      -webkit-transition: all 333ms ease-in-out;
-      -moz-transition: all 333ms ease-in-out;
-      -o-transition: all 333ms ease-in-out;
-      -ms-transition: all 333ms ease-in-out;
-      transition: all 333ms ease-in-out; }
-      form .field label + span {
-        font-family: 'SSStandard';
-        opacity: 0;
-        color: white;
-        display: block;
-        position: absolute;
-        top: 12px;
-        left: 7%;
-        font-size: 2.5em;
-        text-shadow: 1px 2px 0 #cd6302;
-        -webkit-transition: all 333ms ease-in-out;
-        -moz-transition: all 333ms ease-in-out;
-        -o-transition: all 333ms ease-in-out;
-        -ms-transition: all 333ms ease-in-out;
-        transition: all 333ms ease-in-out; }
-    form .field input[type="text"], form .field textarea {
-      border: none;
-      background: #E8E9EA;
-      width: 80.5%;
-      margin: 0;
-      padding: 18px 0;
-      padding-left: 19.5%;
-      color: #313A3D;
-      font-size: 1.4em;
-      letter-spacing: 0.05em;
-      text-transform: uppercase; }
-    form .field input[type="text"]#msg, form .field textarea#msg {
-      height: 18px;
-      resize: none;
-      -webkit-transition: all 333ms ease-in-out;
-      -moz-transition: all 333ms ease-in-out;
-      -o-transition: all 333ms ease-in-out;
-      -ms-transition: all 333ms ease-in-out;
-      transition: all 333ms ease-in-out; }
-    form .field input[type="text"]:focus, form .field input[type="text"].focused {
-      outline: none; }
-    form .field textarea:focus, form .field textarea.focused {
-      outline: none; }
-    form .field input[type="text"]:focus#msg, form .field input[type="text"].focused#msg {
-      padding-bottom: 150px; }
-    form .field textarea:focus#msg, form .field textarea.focused#msg {
-      padding-bottom: 150px; }
-    form .field input[type="text"]:focus + label, form .field input[type="text"].focused + label {
-      width: 18%;
-      background: #FD9638;
-      color: #313A3D; }
-    form .field textarea:focus + label, form .field textarea.focused + label {
-      width: 18%;
-      background: #FD9638;
-      color: #313A3D; }
-    form .field input[type="text"].focused + label, form .field textarea.focused + label {
-      color: #FD9638; }
-    form .field:hover label {
-      width: 18%;
-      background: #313A3D;
-      color: white; }
-  form input[type="submit"] {
-    background: #FD9638;
-    color: white;
-    -webkit-appearance: none;
-    border: none;
-    text-transform: uppercase;
-    position: relative;
-    padding: 13px 50px;
-    font-size: 1.4em;
-    letter-spacing: 0.1em;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    -webkit-transition: all 333ms ease-in-out;
-    -moz-transition: all 333ms ease-in-out;
-    -o-transition: all 333ms ease-in-out;
-    -ms-transition: all 333ms ease-in-out;
-    transition: all 333ms ease-in-out; }
-    form input[type="submit"]:hover {
-      background: #313A3D;
-      color: #FD9638; }
-    form input[type="submit"]:focus {
-      outline: none;
-      background: #cd6302; }
-
 #section6 {
   @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
-  position: relative;
+  overflow-x: hidden !important;
   font-family: 'Quicksand', sans-serif;
-  top: 20px !important; }
+  top: 10px !important; }
   #section6 a, #section6 a:hover {
     text-decoration: none; }
   #section6 .icon {
@@ -550,11 +378,10 @@ form {
     transition: all .3s;
     left: -30px; }
     #section6 .item-bg.active {
-      left: -72px;
+      left: 0;
       top: 0;
       opacity: 1; }
   #section6 .news-slider {
-    z-index: 2;
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -716,5 +543,159 @@ form {
       border-radius: 10px;
       height: 100%;
       width: 100%; }
+
+#section8 {
+  width: 100%;
+  margin-left: -69px;
+  background: #efefef;
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #B6B6B6; }
+  #section8 #hire {
+    background: white;
+    margin: 60px auto 120px;
+    border-top: 15px solid #313A3D;
+    text-align: center;
+    padding: 50px 0 110px;
+    width: 80%;
+    max-width: 1100px; }
+    #section8 #hire h1 {
+      margin-bottom: 40px;
+      font-size: 4em;
+      text-transform: uppercase;
+      font-family: 'Lato', sans-serif;
+      font-weight: 100; }
+  #section8 form {
+    width: 58.3333333333%;
+    margin: 0 auto; }
+    #section8 form .field {
+      width: 100%;
+      position: relative;
+      margin-bottom: 15px; }
+      #section8 form .field label {
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #313A3D;
+        width: 100%;
+        padding: 18px 0;
+        font-size: 1.45em;
+        letter-spacing: 0.075em;
+        -webkit-transition: all 333ms ease-in-out;
+        -moz-transition: all 333ms ease-in-out;
+        -o-transition: all 333ms ease-in-out;
+        -ms-transition: all 333ms ease-in-out;
+        transition: all 333ms ease-in-out; }
+        #section8 form .field label + span {
+          font-family: 'SSStandard';
+          opacity: 0;
+          color: white;
+          display: block;
+          position: absolute;
+          top: 12px;
+          left: 7%;
+          font-size: 2.5em;
+          text-shadow: 1px 2px 0 #cd6302;
+          -webkit-transition: all 333ms ease-in-out;
+          -moz-transition: all 333ms ease-in-out;
+          -o-transition: all 333ms ease-in-out;
+          -ms-transition: all 333ms ease-in-out;
+          transition: all 333ms ease-in-out; }
+      #section8 form .field input[type="text"], #section8 form .field textarea {
+        border: none;
+        background: #E8E9EA;
+        width: 80.5%;
+        margin: 0;
+        padding: 18px 0;
+        padding-left: 19.5%;
+        color: #313A3D;
+        font-size: 1.4em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase; }
+      #section8 form .field input[type="text"]#msg, #section8 form .field textarea#msg {
+        height: 18px;
+        resize: none;
+        -webkit-transition: all 333ms ease-in-out;
+        -moz-transition: all 333ms ease-in-out;
+        -o-transition: all 333ms ease-in-out;
+        -ms-transition: all 333ms ease-in-out;
+        transition: all 333ms ease-in-out; }
+      #section8 form .field input[type="text"]:focus, #section8 form .field input[type="text"].focused {
+        outline: none; }
+      #section8 form .field textarea:focus, #section8 form .field textarea.focused {
+        outline: none; }
+      #section8 form .field input[type="text"]:focus#msg, #section8 form .field input[type="text"].focused#msg {
+        padding-bottom: 150px; }
+      #section8 form .field textarea:focus#msg, #section8 form .field textarea.focused#msg {
+        padding-bottom: 150px; }
+      #section8 form .field input[type="text"]:focus + label, #section8 form .field input[type="text"].focused + label {
+        width: 18%;
+        background: #FD9638;
+        color: #313A3D; }
+      #section8 form .field textarea:focus + label, #section8 form .field textarea.focused + label {
+        width: 18%;
+        background: #FD9638;
+        color: #313A3D; }
+      #section8 form .field input[type="text"].focused + label, #section8 form .field textarea.focused + label {
+        color: #FD9638; }
+      #section8 form .field:hover label {
+        width: 18%;
+        background: #313A3D;
+        color: white; }
+    #section8 form input[type="submit"] {
+      background: #FD9638;
+      color: white;
+      -webkit-appearance: none;
+      border: none;
+      text-transform: uppercase;
+      position: relative;
+      padding: 13px 50px;
+      font-size: 1.4em;
+      letter-spacing: 0.1em;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      -webkit-transition: all 333ms ease-in-out;
+      -moz-transition: all 333ms ease-in-out;
+      -o-transition: all 333ms ease-in-out;
+      -ms-transition: all 333ms ease-in-out;
+      transition: all 333ms ease-in-out; }
+      #section8 form input[type="submit"]:hover {
+        background: #313A3D;
+        color: #FD9638; }
+      #section8 form input[type="submit"]:focus {
+        outline: none;
+        background: #cd6302; }
+
+#footer {
+  font-size: 0.9em;
+  position: relative;
+  margin-top: 200px;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  z-index: +15; }
+  #footer:before {
+    position: absolute;
+    top: 0;
+    height: 3px; }
+  #footer:after {
+    position: absolute;
+    bottom: 1px;
+    top: unset;
+    height: 3px; }
+  #footer:after, #footer:before {
+    /* background: linear-gradient(90deg, rgba(190,78,114,1) 0%, rgba(254,117,98,1) 33.33%, rgba(86,72,105,1) 66.66%,  rgba(126,70,99,1) 100%) */
+    background-image: linear-gradient(90deg, #6bd0e4 0%, #604eb1 33%, #c88e66 66%, #c955a9 100%);
+    /* w3c */
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 5px;
+    z-index: +30; }
 
 /*# sourceMappingURL=style.css.map */
